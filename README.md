@@ -4,9 +4,9 @@ A foundational infrastructure component library for Spring Boot microservices de
 
 ## Installation
 
-### Maven Configuration
+### Maven Usage
 
-1. Add the dependency to your `pom.xml`.
+- Step1: Add the dependency to your `pom.xml`.
 
 ```xml
 <dependency>
@@ -16,7 +16,7 @@ A foundational infrastructure component library for Spring Boot microservices de
 </dependency>
 ```
 
-2. Add the repository configuration.
+- Step2: Add the repository configuration.
 
 ```xml
 <repository>
@@ -25,7 +25,7 @@ A foundational infrastructure component library for Spring Boot microservices de
 </repository>
 ```
 
-### Maven Mirror Configuration
+#### Maven Mirror Configuration
 
 When using custom Maven settings (~/.m2/settings.xml), ensure mirrors are configured properly:
 
@@ -33,3 +33,24 @@ When using custom Maven settings (~/.m2/settings.xml), ensure mirrors are config
 - Replace with ✅ `<mirrorOf>central</mirrorOf>`
 
 > The options of `<mirrorOf>` can be used to specify the scope of the mirror image
+
+### Gradle Usage
+
+- Step1: Add the dependency to your `build.gradle`.
+
+```groovy
+implementation 'com.arminzheng:infrastructure:0.0.1'
+```
+
+- Step2: Add the `repositories` configuration.
+
+```groovy
+repositories {
+  maven {
+    url = uri('https://www.arminzheng.com/repository')
+  }
+}
+```
+
+---
+(END)
